@@ -1,0 +1,28 @@
+{
+  "name": "ethical-polyfill-fetch",
+  "version": "0.0.0",
+  "description": "Node global fetch polyfill for the Ethical framework.",
+  "main": "./dist/index.js",
+  "scripts": {
+    "test": "nutra --config ./nutra.config.js && npm run prepublish",
+    "test-debugger": "DEBUG=1 node --inspect-brk ./node_modules/.bin/nutra --config ./nutra.config.js",
+    "build": "babel ./src --out-dir ./dist",
+    "prepublish": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ethically/ethical-polyfill-fetch.git"
+  },
+  "author": "m-a-r-c-e-l-i-n-o <me@marceli.no>",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.24.0",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-preset-env": "^1.6.0",
+    "nutra": "0.0.14",
+    "nutra-jasmine-coverage-babel-preset": "0.0.10"
+  },
+  "dependencies": {
+    "node-fetch": "^1.7.3"
+  }
+}
